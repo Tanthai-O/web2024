@@ -1,0 +1,118 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Press Start 2P', sans-serif; /* Minecraft-like font */
+    background-image: url('https://cdn.pixabay.com/photo/2022/01/08/10/28/minecraft-6923660_1280.jpg'); /* Your Minecraft background image */
+    background-size: cover; /* Ensure the image covers the whole page */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make background fixed when scrolling */
+    color: #b6b6b6; /* Light text color */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(40, 40, 40, 0.8); /* Dark Minecraft background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #8bc34a; /* Minecraft grass green color */
+    animation: fadeIn 2s ease-out; /* Fade in effect */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  nav li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #b6b6b6;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #8bc34a; /* Accent color for hover */
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #8bc34a; /* Accent color on hover */
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .detail {
+    font-size: 1rem;
+    color: #999999;
+    margin-left: 10px;
+    font-style: italic;
+  }
+  
+  footer p {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #b6b6b6;
+    text-align: center;
+  }
+  
+  /* Animation for header */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add a smooth scroll for any anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
