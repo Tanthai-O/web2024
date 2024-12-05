@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Myweb_2024 - Minecraft Theme</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Minecraft-like font -->
+  <title>My Minecraft Themed Website</title>
+  <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet"> <!-- ฟอนต์ Minecraftia -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
+    <!-- ส่วน header -->
     <header>
-      <h1>SC310006 Mobile and Web Application Development</h1>
+      <!-- เปลี่ยนโลโก้เป็นของคุณ -->
+      <img src="images\logo\model.png" alt="Logo" class="logo">
+      <!-- <h1>Welcome to My Minecraft Website</h1> -->
     </header>
-    <nav>
-      <ul>
-        <li><a href="work1.html">Work 1 <span class="detail">Details</span></a></li>
-        <li><a href="work2.html">Work 2 <span class="detail">Details</span></a></li>
-        <li><a href="#">Work 3 <span class="detail">Coming Soon</span></a></li>
-      </ul>
-    </nav>
-    <footer>
-      <p>By Tanthai Orahunta 653380199-3 sec.2</p>
-    </footer>
-  </div>
+    
+    <!-- เมนูหลัก -->
+    <div class="menu">
+      <!-- ปุ่ม All Work แทน Singleplayer -->
+      <button class="btn-minecraft" onclick="window.location.href='allWork.html';">All Work</button>
+      <!-- ปุ่ม Profile แทน Multiplayer -->
+      <button class="btn-minecraft" onclick="window.location.href='profile.html';">Profile</button>
+      <!-- <button class="btn-minecraft" onclick="window.location.href='realms.html';">Minecraft Realms</button> -->
+    </div>
+
+  <script>
+    const button = document.querySelectorAll('.btn-minecraft');
+    button.forEach(btn => {
+      btn.addEventListener('mouseleave', function (){
+        btn.blur(); // บลูร์เมื่อเมาส์ออกจากปุ่ม
+      });
+    });
+  </script>
 </body>
 </html>

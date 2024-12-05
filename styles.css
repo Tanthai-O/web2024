@@ -1,118 +1,202 @@
-/* General styles */
+/* General styles for all pages */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Press Start 2P', sans-serif; /* Minecraft-like font */
-    background-image: url('https://cdn.pixabay.com/photo/2022/01/08/10/28/minecraft-6923660_1280.jpg'); /* Your Minecraft background image */
-    background-size: cover; /* Ensure the image covers the whole page */
-    background-position: center; /* Center the background image */
-    background-attachment: fixed; /* Make background fixed when scrolling */
-    color: #b6b6b6; /* Light text color */
-    line-height: 1.6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    flex-direction: column;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 800px;
-    padding: 30px;
-    text-align: center;
-    border-radius: 8px;
-    background-color: rgba(40, 40, 40, 0.8); /* Dark Minecraft background */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #8bc34a; /* Minecraft grass green color */
-    animation: fadeIn 2s ease-out; /* Fade in effect */
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav li {
-    margin: 20px 0;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-  }
-  
-  nav li:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #b6b6b6;
-    font-size: 1.5rem;
-    position: relative;
-    padding: 5px 0;
-    display: inline-block;
-    transition: all 0.3s ease;
-  }
-  
-  nav a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #8bc34a; /* Accent color for hover */
-    bottom: 0;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #8bc34a; /* Accent color on hover */
-  }
-  
-  nav a:hover::after {
-    width: 100%;
-    left: 0;
-  }
-  
-  .detail {
-    font-size: 1rem;
-    color: #999999;
-    margin-left: 10px;
-    font-style: italic;
-  }
-  
-  footer p {
-    margin-top: 30px;
-    font-size: 1.2rem;
-    color: #b6b6b6;
-    text-align: center;
-  }
-  
-  /* Animation for header */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Add a smooth scroll for any anchor links */
-  html {
-    scroll-behavior: smooth;
-  }
-  
+  font-family: 'Minecraftia', sans-serif; /* ใช้ฟอนต์ Minecraftia สำหรับฟอนต์ในทุกๆ หน้า */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ปรับพื้นหลังให้สวยงาม */
+body {
+  background-image: url('images/background/minecraft-6923660.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ปรับความกว้างของ container ให้อยู่ในขนาดที่เหมาะสม */
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background: rgba(40, 40, 40, 0.8); /* พื้นหลังมืด */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* โลโก้ */
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-image {
+  width: 250px;
+  height: auto;
+}
+
+/* Header styling */
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #8bc34a; /* Minecraft green color */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8); /* เพิ่มเงาให้ข้อความ */
+}
+
+/* ปุ่มเมนู */
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-minecraft {
+  background: #727272;
+  color: rgb(247, 247, 247);
+  width: 100%;
+  padding: .5rem 0;
+  margin-bottom: .75rem;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+  font-size: 1.25rem;
+  letter-spacing: .025em;
+  border: 2px solid rgba(0, 0, 0, 1);
+  box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.5),
+              inset -3px -3px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ปรับให้ปุ่มมีเอฟเฟกต์ hover และ focus */
+.btn-minecraft:hover {
+  background: rgba(115, 107, 221, 1);
+}
+
+.btn-minecraft:focus {
+  color: rgb(246, 246, 44);
+  outline: none;
+}
+
+.menu-options .btn-minecraft:first-child {
+  margin-right: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+}
+
+/* Profile section styling */
+.profile {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.profile-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.profile-right {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.profile-right h2 {
+  font-size: 2rem;
+  color: #8bc34a;
+  margin-bottom: 10px;
+}
+
+.profile-right p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+/* การจัดการลิงค์งานในหน้า All Work */
+.work-list ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.work-list li {
+  margin: 10px;
+}
+
+.work-list a {
+  text-decoration: none;
+  color: #8bc34a;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.work-list a:hover {
+  color: #b6b6b6;
+  text-decoration: underline;
+}
+
+/* เพิ่มการปรับแต่งสำหรับปุ่ม Back */
+nav ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+nav ul li {
+  margin: 5px 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #8bc34a;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #b6b6b6;
+  text-decoration: underline;
+}
+
+/* เพิ่มสไตล์ที่สามารถใช้ได้กับปุ่ม Back ในหน้าอื่นๆ */
+.btn-back {
+  background: #8bc34a;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #7c8b3b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ฟอนต์ Minecraftia เฉพาะในหน้า All Work */
+.all-work-font {
+  font-family: 'Minecraftia', sans-serif; /* กำหนดฟอนต์ Minecraftia */
+}
