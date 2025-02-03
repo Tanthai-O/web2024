@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+    <title>Work4</title>
+    <link rel="stylesheet" href="work4.css">
+</head>
+<body>
+    <a-scene>
+        <!-- 360 Background -->
+        <a-sky src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"></a-sky>
+        <!-- Introduction Info -->
+        <a-text value="ชื่อ Tanthai Orahunta\nรหัส 653380199-3"
+                color="#FFFFFF"
+                width="3"
+                position="-1 2 -3"></a-text>
+  
+        <!-- Additional Animation (e.g., bouncing sphere) -->
+        <a-sphere position="1 1.5 -2" radius="0.3" color="#FF6347">
+          <a-animation attribute="position" dur="2000" from="1 1.5 -2" to="1 2 -2" repeat="indefinite" direction="alternate"></a-animation>
+        </a-sphere>
+  
+      </a-scene>
+</body>
+</html>
