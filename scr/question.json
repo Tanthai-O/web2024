@@ -1,0 +1,39 @@
+{
+    "subjects": [
+      {
+        "name": "Mathematics",
+        "questions": [
+          {
+            "id": 1,
+            "title": "What is 2 + 2?",
+            "options": ["1", "2", "3", "4"],
+            "answer": 4
+          },
+          {
+            "id": 2,
+            "title": "What is 5 * 3?",
+            "options": ["10", "15", "20", "25"],
+            "answer": 2
+          }
+        ]
+      },
+      {
+        "name": "Science",
+        "questions": [
+          {
+            "id": 1,
+            "title": "What planet is known as the Red Planet?",
+            "options": ["Earth", "Mars", "Venus", "Jupiter"],
+            "answer": 2
+          },
+          {
+            "id": 2,
+            "title": "What is H2O?",
+            "options": ["Oxygen", "Hydrogen", "Water", "Carbon Dioxide"],
+            "answer": 3
+          }
+        ]
+      }
+    ]
+  }
+  
