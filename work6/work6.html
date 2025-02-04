@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Web App</title>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+
+    <!-- React & ReactDOM -->
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.development.js" crossorigin></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Babel สำหรับรัน JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- React Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
+
+  </head>
+  <body>
+    <!-- ตรงนี้คือจุดที่ React จะ Render แอป -->
+    <div id="myapp" class="container p-4"></div>    
+
+    <!-- โหลดไฟล์ work6.js ที่มีโค้ด React -->
+    <script type="text/babel" src="work6.js"></script>
+  </body>
+</html>

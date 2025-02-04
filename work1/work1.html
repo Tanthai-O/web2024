@@ -36,79 +36,81 @@
 </div>
 
 <script>
-  var quizlist = [];  // ตัวแปรเพื่อเก็บข้อมูลจาก quiz.json
+  var quizlist = [];
 
   $(function(){
-    // ซ่อน quizBox และ resultBox
     $("#quizBox").hide();
     $("#resultBox").hide();
-    
-    // โหลดข้อมูล quiz จากไฟล์ quiz.json
-    $.getJSON("quiz.json", function(data) {
-      quizlist = data;
-    });
 
-    // เริ่มทำแบบทดสอบ
+    // โหลดข้อมูล quiz จากไฟล์ JSON
+    $.getJSON("quiz1.json")
+  .done(function(data) {
+    quizlist = data;
+    console.log("✅ โหลดแบบทดสอบสำเร็จ:", quizlist);
+    if (quizlist.length === 0) {
+      alert("❌ JSON โหลดสำเร็จ แต่ไม่มีข้อมูล กรุณาตรวจสอบไฟล์ quiz1.json");
+    }
+  })
+  .fail(function(jqXHR, textStatus, errorThrown) {
+    console.error("❌ เกิดข้อผิดพลาดในการโหลด JSON:", textStatus, errorThrown);
+    alert("❌ ไม่สามารถโหลดแบบทดสอบ กรุณาตรวจสอบว่า quiz1.json อยู่ในตำแหน่งที่ถูกต้อง");
+  });
+
     $("#btnStart").click(function(){
-       $("#startBox").hide();
-       $("#quizBox").show();
-       displayQuizList();
+      if (quizlist.length === 0) {
+        alert("ไม่มีข้อมูลแบบทดสอบ กรุณาตรวจสอบไฟล์ quiz1.json");
+        return;
+      }
+      $("#startBox").hide();
+      $("#quizBox").show();
+      displayQuizList();
     });
 
-    // ตรวจคำตอบ
     $("#btnCheckAnswer").click(function(){
       var score = 0;
-      
-      // ตรวจคำตอบแต่ละข้อ
       $("input[type='radio']:checked").each(function(){
-        var questionIndex = $(this).attr('name').replace('q', '') - 1;  // หาเลขข้อที่เลือก
-        var selectedValue = parseInt($(this).val());  // ค่าของตัวเลือกที่ผู้ใช้เลือก
+        var questionIndex = parseInt($(this).attr('name').replace('q', '')) - 1;
+        var selectedValue = parseInt($(this).val());
         if (selectedValue === quizlist[questionIndex].answer) {
           score++;
         }
       });
 
-      // แสดงผลคะแนน
-      $("#resultText").text("คุณได้คะแนน " + score + " คะแนน จากทั้งหมด " + quizlist.length + " ข้อ");
+      $("#resultText").text(`คุณได้คะแนน ${score} จากทั้งหมด ${quizlist.length} ข้อ`);
       $("#resultBox").show();
       $("#quizBox").hide();
     });
 
-    // ฟังก์ชันกลับไปที่หน้าแรก
     $("#btnBackToStart").click(function(){
-      // ซ่อนผลลัพธ์ และแสดงหน้าเริ่มต้น
       $("#resultBox").hide();
       $("#startBox").show();
     });
   });
 
-  function displayQuizList(){
+  function displayQuizList() {
     $("#quizListBox").html("<div class='p-1'>ข้อสอบ</div>");
-    for(var i in quizlist){
+    for (var i in quizlist) {
       displayQuiz(i, quizlist[i]);
     }
   }
 
-  function displayQuiz(i, q){
+  function displayQuiz(i, q) {
     var no = parseInt(i) + 1;
-    var html = "<div class='p-2'>ข้อที่ "+no+".<div>"+q.title+"</div>";
-
-    // ถ้ามีรูปภาพในโจทย์
-    if(q.image) {
-      html += "<img src='" + q.image + "' alt='Image for question " + no + "' class='quiz-image'>";
+    var html = `<div class='p-2'>ข้อที่ ${no}.<div>${q.title}</div>`;
+    if (q.image) {
+      html += `<img src='${q.image}' class='quiz-image'>`;
     }
-
-    for(var c in q.options){
+    for (var c in q.options) {
       var v = parseInt(c) + 1;
-      html += "<div class='alert alert-info'>"; 
-      html += "<input type='radio' name='q"+no+"' value='"+v+"'>"+v+". ";  
-      html += q.options[c] + "</div>";  
+      html += `<div class='alert alert-info'>
+                 <input type='radio' name='q${no}' value='${v}'> ${v}. ${q.options[c]}
+               </div>`;
     }
     html += "</div>";
     $("#quizListBox").append(html);
   }
-
 </script>
+
 
 </body>
 </html>

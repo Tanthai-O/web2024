@@ -9,7 +9,7 @@
         "ออสเตรีย"
       ],
       "answer": 5,
-      "image": "images/Glock17Gen5.webp"
+      "image": "../images/Glock17Gen5.webp"
     },
     {
         "title": "ปืนในภาพมาจากประเทศอะไร",
@@ -21,7 +21,7 @@
           "ออสเตรีย"
         ],
       "answer": 4,
-      "image": "images/Heckler_&_Koch_MP5-1.jpg"
+      "image": "../images/Heckler_&_Koch_MP5-1.jpg"
     },
     {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -33,7 +33,7 @@
           "HK USP 9mm"
         ],
         "answer": 2,
-        "image": "images/Sr16.webp"
+        "image": "../images/Sr16.webp"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -45,7 +45,7 @@
           "HK USP 9mm"
         ],
         "answer": 3,
-        "image": "images/MP9.webp"
+        "image": "../images/MP9.webp"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -57,7 +57,7 @@
           "H&K USP 9mm"
         ],
         "answer": 5,
-        "image": "images/First-year_H&K_USP_9mm.png"
+        "image": "../images/First-year_H&K_USP_9mm.png"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -69,7 +69,7 @@
           "H&K USP 9mm"
         ],
         "answer": 4,
-        "image": "images/m110a1.webp"
+        "image": "../images/m110a1.webp"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -81,7 +81,7 @@
           "AUG A3"
         ],
         "answer": 5,
-        "image": "images/AUG-A3.jpg"
+        "image": "../images/AUG-A3.jpg"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -93,7 +93,7 @@
           "AUG A3"
         ],
         "answer": 1,
-        "image": "images/Sig-MPX.webp"
+        "image": "../images/Sig-MPX.webp"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -105,7 +105,7 @@
           "AUG A3"
         ],
         "answer": 2,
-        "image": "images/colt_M5.jpg"
+        "image": "../images/colt_M5.jpg"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -117,7 +117,7 @@
           "AUG A3"
         ],
         "answer": 3,
-        "image": "images/AAC honey badger.jpg"
+        "image": "../images/AAC honey badger.jpg"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -129,7 +129,7 @@
           "AUG A3"
         ],
         "answer": 4,
-        "image": "images/MP7_.webp"
+        "image": "../images/MP7_.webp"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -141,7 +141,7 @@
           "KRISS VECTOR SDP"
         ],
         "answer": 1,
-        "image": "images/HK_VP9.jpg"
+        "image": "../images/HK_VP9.jpg"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -153,7 +153,7 @@
           "KRISS VECTOR SDP"
         ],
         "answer": 2,
-        "image": "images/S&W M&P9 M2.0.jpg"
+        "image": "../images/S&W M&P9 M2.0.jpg"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -165,7 +165,7 @@
           "KRISS VECTOR SDP"
         ],
         "answer": 3,
-        "image": "images/cmmg_banshee.png"
+        "image": "../images/cmmg_banshee.png"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -177,7 +177,7 @@
           "KRISS VECTOR SDP"
         ],
         "answer": 4,
-        "image": "images/CZ SHADOW 2.png"
+        "image": "../images/CZ SHADOW 2.png"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -189,7 +189,7 @@
           "KRISS VECTOR SDP"
         ],
         "answer": 5,
-        "image": "images/kriss-vector-1.jpg"
+        "image": "../images/kriss-vector-1.jpg"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -201,7 +201,7 @@
           "BERETTA 92FS"
         ],
         "answer": 2,
-        "image": "images/benelli m2.jpg"
+        "image": "../images/benelli m2.jpg"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -213,7 +213,7 @@
           "BERETTA 92FS"
         ],
         "answer": 3,
-        "image": "images/benelli-m1014.avif"
+        "image": "../images/benelli-m1014.avif"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -225,7 +225,7 @@
           "BERETTA 92FS"
         ],
         "answer": 4,
-        "image": "images/Barrett-M82A1.jpg"
+        "image": "../images/Barrett-M82A1.jpg"
       },
       {
         "title": "ปืนในภาพชื่อว่าอะไร",
@@ -237,7 +237,7 @@
           "BERETTA 92FS"
         ],
         "answer": 5,
-        "image": "images/BERETTA 92FS.jpg"
+        "image": "../images/BERETTA 92FS.jpg"
       }
   ]
   
